@@ -7,4 +7,10 @@ public interface Car extends HasBrand, IsMaintenance{
 
     int getTier();
 
+    // class yg meng implement interface ini
+    // tidak wajib mengoveride method ini
+    default boolean isBig(){
+        return false;
+    }
+
 }

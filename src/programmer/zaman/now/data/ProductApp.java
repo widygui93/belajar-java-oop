@@ -5,5 +5,7 @@ public class ProductApp {
         Product product = new Product("iPhone",30000);
         System.out.println(product.name);
         System.out.println(product.price);
+
+        System.out.println(product);
     }
 }
