@@ -6,8 +6,7 @@ import programmer.zaman.now.util.ValidationUtil;
 
 public class ValidationApp {
     public static void main(String[] args) {
-        LoginRequest loginRequest = new LoginRequest("widy", null);
-
+        LoginRequest loginRequest = new LoginRequest("widy", "rahasia");
 
         try {
             ValidationUtil.validate(loginRequest);
@@ -27,6 +26,12 @@ public class ValidationApp {
         } finally {
             System.out.println("error gak error tetep di eksekusi");
         }
+
+
+        LoginRequest loginRequest2 = new LoginRequest(null,null);
+        // untuk RuntimeException tidak perlu try catch
+        ValidationUtil.validateRuntime(loginRequest2);
+        System.out.println("jalan gak ya");
 
     }
 }
